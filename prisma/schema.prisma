@@ -14,13 +14,13 @@ datasource db {
 }
 
 model Driver {
-  id           Int    @id @default(autoincrement())
+  id           Int     @id @default(autoincrement())
   firstName    String
   lastName     String
   email        String
   country      String
   city         String
-  referralCode String
+  referralCode String? @default("")
   carType      String
 }
 
