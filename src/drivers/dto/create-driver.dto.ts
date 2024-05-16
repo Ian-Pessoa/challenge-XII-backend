@@ -1,4 +1,4 @@
-import { IsString, IsNotEmpty, IsEmail } from 'class-validator';
+import { IsString, IsNotEmpty, IsEmail, IsBoolean } from 'class-validator';
 
 export class CreateDriverDto {
   @IsString()
@@ -23,6 +23,9 @@ export class CreateDriverDto {
 
   @IsString()
   referralCode: string;
+
+  @IsBoolean()
+  ownCar: boolean;
 
   @IsString()
   @IsNotEmpty()
